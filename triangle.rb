@@ -31,6 +31,7 @@ end
 #returns true if the sides make up for a valid triangle
 def validate_triangle(*sides)
 
+    # Because we receive any number of parameters, one does not know...
     if sides.size != 3
         raise TriangleError, 'triangles have 3 sides! no more, no less'
     end
@@ -42,6 +43,7 @@ def validate_triangle(*sides)
         end
     end
 
+    # accounts for sides that can't form a triangle
     sides = sides.sort
     if sides[0] + sides[1] <= sides[2]
         raise TriangleError, 'Can\'t form a triangle with those sides'
