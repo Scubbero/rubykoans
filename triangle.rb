@@ -42,7 +42,7 @@ def validate_triangle(*sides)
         end
     end
 
-    sides.sort
+    sides = sides.sort
     if sides[0] + sides[1] <= sides[2]
         raise TriangleError, 'Can\'t form a triangle with those sides'
     end
