@@ -9,8 +9,7 @@ class AboutKeywordArguments < Neo::Koan
   def test_keyword_arguments
     assert_equal Array, method_with_keyword_arguments.class # this is calling the method without arguments then asking for the class of the result
     assert_equal [1, 'two'], method_with_keyword_arguments
-    assert_equal ['one', 'two'], method_with_keyword_arguments(one: 'one') # note: a symbol is used to identify a parameter
-    assert_equal [1, 2], method_with_keyword_arguments(two: 2)
+    assert_equal ['one', 'two'], method_with_keyword_arguments(one: 'one')
   end
 
   def method_with_keyword_arguments_with_mandatory_argument(one, two: 2, three: 3)
