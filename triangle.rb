@@ -14,7 +14,7 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-    validate_triangle a, b, c 
+    validate_triangle a, b, c
 
     if a == b && b == c
         # all equal sides
@@ -37,7 +37,7 @@ def validate_triangle(*sides)
     end
 
     for side in sides
-        # accounting for 0 or negative side length 
+        # accounting for 0 or negative side length
         if side <= 0
             raise TriangleError, 'triangle side length must be greather than 0'
         end

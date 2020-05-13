@@ -32,8 +32,7 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 def score(dice)
   (1..6).inject(0) { |points, roll|
     roll_count = dice.count(roll)
-    puts "-----------"
-    
+
     if roll == 1
       points += 1000 * (roll_count / 3) + 100 * (roll_count % 3)
     elsif roll == 5
@@ -43,13 +42,14 @@ def score(dice)
     if roll != 1
       points += 100 * roll * (roll_count / 3)
     end
+
     points
   }
 =begin
   This was my first answer, but i had forgotten some stuff about ruby since i started the koans
   i had to go back to previous exercises to catch on and obtain the above method
   dice.sort()
-  
+
   dice.each do |roll|
     roll_count = roll == last_roll || roll_count == 0 ? roll_count + 1 : 0
 
@@ -58,7 +58,7 @@ def score(dice)
     elsif roll == 5
       points += roll_count != 3 ? 50 : -100
     end
-    
+
     if roll_count == 3
       points += roll == 1 ? 1000 : roll * 100
     end

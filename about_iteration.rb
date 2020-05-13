@@ -91,7 +91,7 @@ class AboutIteration < Neo::Koan
     # Extra Credit:
     # Describe in your own words what inject does.
     # it's like javascript reduce,
-    # it merges all numbers into one based on a certain logic
+    # it merges all numbers into one (could be anything, not just numbers) based on a certain logic
     # the parameter is the initial number for instance
     # [2, 3, 4].inject(0) { |product, item| product * item }
     # would return 0 instead
