@@ -51,6 +51,10 @@ class AboutDiceProject < Neo::Koan
     # If the rolls are random, then it is possible (although not
     # likely) that two consecutive rolls are equal.  What would be a
     # better way to test this?
+    # Attempt it a bigger number of times until satisfied of the probability
+    # of the throws didn't change, learn't about it on a QA class but don't exactly remember
+    # the best method
+
   end
 
   def test_you_can_roll_different_numbers_of_dice
