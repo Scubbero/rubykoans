@@ -61,8 +61,6 @@ class AboutProxyObjectProject < Neo::Koan
     tv.channel = 10
     tv.power
 
-    p tv.channel
-
     assert_equal 10, tv.channel
     assert tv.on?
   end
