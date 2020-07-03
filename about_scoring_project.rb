@@ -30,6 +30,7 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 # Your goal is to write the score method.
 
 def score(dice)
+  # each iteration represents a single type of roll from 1 to 6
   (1..6).inject(0) { |points, roll|
     roll_count = dice.count(roll)
 
